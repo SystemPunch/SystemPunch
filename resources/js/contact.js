@@ -9,7 +9,8 @@ function submitContactForm() {
         var $name = $("#contactName").val();
         $("#contactName").tooltip("hide");
     } else {
-        $("#nameGroup").addClass("has-error");
+        $("#nameGroup").addClass("has-error has-feedback");
+        $("#nameGroup").append("<span class='glyphicon glyphicon-remove form-control-feedback'></span>");
         $("#contactName").tooltip({
             placement: "left",
             title: "You must enter a name!",
@@ -23,7 +24,8 @@ function submitContactForm() {
         var $email = $("#contactEmail").val();
         $("#contactEmail").tooltip("hide");
     } else {
-        $("#emailGroup").addClass("has-error");
+        $("#emailGroup").addClass("has-error has-feedback");
+        $("#emailGroup").append("<span class='glyphicon glyphicon-remove form-control-feedback'></span>");
         $("#contactEmail").tooltip({
             placement: "left",
             title: "You must enter a valid email!",
@@ -37,7 +39,8 @@ function submitContactForm() {
         var $message = $("#contactMessage").val();
         $("#contactMessage").tooltip("hide");
     } else {
-        $("#messageGroup").addClass("has-error");
+        $("#messageGroup").addClass("has-error has-feedback");
+        $("#messageGroup").append("<span class='glyphicon glyphicon-remove form-control-feedback'></span>");
         $("#contactMessage").tooltip({
             placement: "left",
             title: "You must enter "+ (30-$("#contactMessage").val().length) +" more character(s)!",
